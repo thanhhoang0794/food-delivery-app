@@ -6,6 +6,8 @@ target 'FoodDelivery' do
   use_frameworks!
 
   # Pods for FoodDelivery
+  pod 'Alamofire'
+
 
   target 'FoodDeliveryTests' do
     inherit! :search_paths

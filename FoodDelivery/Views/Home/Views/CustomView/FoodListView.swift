@@ -1,5 +1,5 @@
 //
-//  CheckoutView.swift
+//  FoodListContentView.swift
 //  FoodDelivery
 //
 //  Created by Henry on 19/10/2024.
@@ -13,23 +13,21 @@ struct FoodListContentView: View {
         List(foodItems) { item in
             NavigationLink(destination: FoodDetailView(foodItem: item)) {
                 HStack {
-                    // Use AsyncImage to load images from URLs
-                    AsyncImage(url: URL(string: item.imageName)) { image in
-                        image
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                            .cornerRadius(8)
-                    } placeholder: {
-                        // Show a placeholder while loading
-                        ProgressView()
-                            .frame(width: 50, height: 50)
-                    }
+                    // Use CachedAsyncImage to load and cache images from URLs
+                    CachedAsyncImage(
+                        url: URL(string: item.imageName),
+                        placeholder: Image(systemName: "photo")
+                    )
+                    .frame(width: 50, height: 50)
+                    .cornerRadius(8)
 
                     VStack(alignment: .leading) {
                         Text(item.name)
                             .font(.headline)
+                            .lineLimit(1)
                         Text(item.description)
                             .font(.subheadline)
+                            .lineLimit(2)
                         Text("$\(item.price, specifier: "%.2f")")
                             .font(.subheadline)
                             .foregroundColor(.gray)

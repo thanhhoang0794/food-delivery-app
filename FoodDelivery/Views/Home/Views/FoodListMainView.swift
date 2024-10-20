@@ -1,5 +1,5 @@
 //
-//  CheckoutView.swift
+//  FoodListMainView.swift
 //  FoodDelivery
 //
 //  Created by Henry on 19/10/2024.
@@ -27,13 +27,13 @@ struct FoodListMainView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     VStack {
-                        
                         HStack(spacing: 4) {
-                            Picker("Select Food Type", selection: $viewModel.selectedFoodType) {
-                                ForEach(FoodType.allCases) { type in
-                                    Text(type.rawValue).tag(type)
+                            Picker("Select Food Type", selection: $viewModel.selectedCategory) {
+                                ForEach(viewModel.listCategory) { category in
+                                    Text(category.strCategory).tag(category as Category?)
                                 }
-                            }.pickerStyle(MenuPickerStyle())
+                            }
+                            .pickerStyle(MenuPickerStyle())
                             
                             Image(systemName: "chevron.down")
                                 .font(.caption)
@@ -50,6 +50,9 @@ struct FoodListMainView: View {
                         }
                     }
                 }
+            }
+            .onAppear {
+                viewModel.fetchMeals()
             }
         }
     }
