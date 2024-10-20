@@ -12,10 +12,13 @@ struct FoodDetailView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Image(foodItem.imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(maxWidth: 300, maxHeight: 300)
+            // Use AsyncImage to load the image from a URL
+            CachedAsyncImage(
+                url: URL(string: foodItem.imageName),
+                placeholder: Image(systemName: "photo")
+            )
+            .frame(maxWidth: 300, maxHeight: 300)
+            .cornerRadius(8)
 
             Text(foodItem.name)
                 .font(.largeTitle)
@@ -35,4 +38,5 @@ struct FoodDetailView: View {
         .navigationTitle(foodItem.name)
     }
 }
+
 

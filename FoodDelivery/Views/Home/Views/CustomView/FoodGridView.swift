@@ -1,5 +1,5 @@
 //
-//  CheckoutView.swift
+//  FoodGridView.swift
 //  FoodDelivery
 //
 //  Created by Henry on 19/10/2024.
@@ -18,15 +18,12 @@ struct FoodGridView: View {
             ForEach(foodItems) { item in
                 NavigationLink(destination: FoodDetailView(foodItem: item)) {
                     VStack(alignment: .leading, spacing: 8) {
-                        AsyncImage(url: URL(string: item.imageName)) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .cornerRadius(10)
-                        } placeholder: {
-                            ProgressView()
-                                .frame(width: itemWidth)
-                        }
+                        CachedAsyncImage(
+                            url: URL(string: item.imageName),
+                            placeholder: Image(systemName: "photo")
+                        )
+                        .frame(width: itemWidth - 10, height: itemWidth)
+                        .cornerRadius(8)
 
                         Text(item.name)
                             .font(.headline)

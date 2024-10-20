@@ -1,3 +1,9 @@
+//
+//  SearchView.swift
+//  FoodDelivery
+//
+//  Created by Henry on 19/10/2024.
+//
 import SwiftUI
 
 struct SearchView: View {
@@ -7,11 +13,12 @@ struct SearchView: View {
         VStack {
             SearchBar(text: $viewModel.searchText)
                 .padding()
-            // List with sections based on FoodType
+
+            // List with sections based on the first character of category names
             List {
-                ForEach(viewModel.sectionedFoodItems.keys.sorted(by: { $0.rawValue < $1.rawValue }), id: \.self) { foodType in
-                    Section(header: Text(foodType.rawValue)) {
-                        ForEach(viewModel.sectionedFoodItems[foodType] ?? []) { item in
+                ForEach(viewModel.sectionedFoodItemsByCategory.keys.sorted(), id: \.self) { letter in
+                    Section(header: Text(letter)) {
+                        ForEach(viewModel.sectionedFoodItemsByCategory[letter] ?? []) { item in
                             NavigationLink(destination: FoodDetailView(foodItem: item)) {
                                 HStack {
                                     // AsyncImage with state handling
