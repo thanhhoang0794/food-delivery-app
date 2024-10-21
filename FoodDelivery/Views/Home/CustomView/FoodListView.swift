@@ -13,7 +13,6 @@ struct FoodListContentView: View {
         List(foodItems) { item in
             NavigationLink(destination: FoodDetailView(foodItem: item)) {
                 HStack {
-                    // Use CachedAsyncImage to load and cache images from URLs
                     CachedAsyncImage(
                         url: URL(string: item.imageName),
                         placeholder: Image(systemName: "photo")

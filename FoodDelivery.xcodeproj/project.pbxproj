@@ -120,6 +120,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B2D59762CC5F21A007F9276 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2B2D597A2CC5F25E007F9276 /* Checkout */,
+				2B2D59792CC5F258007F9276 /* Profile */,
+				2B2D59782CC5F24F007F9276 /* Order */,
+				2B2D59772CC5F22E007F9276 /* Home */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2B2D59772CC5F22E007F9276 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ECDD6A382CC36FFF00FFCD8B /* FoodListViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2B2D59782CC5F24F007F9276 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		2B2D59792CC5F258007F9276 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2B2D597A2CC5F25E007F9276 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
 		62BE4C1F4CAF717351ABCFDA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +211,7 @@
 				ECDD6A572CC4148700FFCD8B /* API */,
 				ECDD6A352CC36F3700FFCD8B /* Helpers */,
 				ECDD6A342CC36F2E00FFCD8B /* Views */,
+				2B2D59762CC5F21A007F9276 /* ViewModels */,
 				ECDD6A322CC36F1000FFCD8B /* Models */,
 				ECDD6A082CC36EE400FFCD8B /* FoodDeliveryApp.swift */,
 				ECDD6A0C2CC36EE900FFCD8B /* Assets.xcassets */,
@@ -237,8 +278,8 @@
 		ECDD6A4A2CC3E49400FFCD8B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				ECDD6A4F2CC3E4C600FFCD8B /* ViewModel */,
-				ECDD6A4E2CC3E4BE00FFCD8B /* Views */,
+				ECDD6A502CC3E4EC00FFCD8B /* CustomView */,
+				ECDD6A462CC3D36500FFCD8B /* FoodListMainView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -265,23 +306,6 @@
 				ECDD6A552CC3E56D00FFCD8B /* CheckoutView.swift */,
 			);
 			path = Checkout;
-			sourceTree = "<group>";
-		};
-		ECDD6A4E2CC3E4BE00FFCD8B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				ECDD6A502CC3E4EC00FFCD8B /* CustomView */,
-				ECDD6A462CC3D36500FFCD8B /* FoodListMainView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		ECDD6A4F2CC3E4C600FFCD8B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				ECDD6A382CC36FFF00FFCD8B /* FoodListViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		ECDD6A502CC3E4EC00FFCD8B /* CustomView */ = {

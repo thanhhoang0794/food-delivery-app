@@ -12,13 +12,16 @@ struct FoodDetailView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            // Use AsyncImage to load the image from a URL
-            CachedAsyncImage(
-                url: URL(string: foodItem.imageName),
-                placeholder: Image(systemName: "photo")
-            )
-            .frame(maxWidth: 300, maxHeight: 300)
-            .cornerRadius(8)
+            GeometryReader { geometry in
+                CachedAsyncImage(
+                    url: URL(string: foodItem.imageName),
+                    placeholder: Image(systemName: "photo")
+                )
+                .frame(width: geometry.size.width, height: geometry.size.width) // Set width to fill the available space
+                .clipped() // Ensure the image doesn't overflow
+                .cornerRadius(8)
+            }
+            .frame(height: 300) // Set a fixed height for the image area
 
             Text(foodItem.name)
                 .font(.largeTitle)
@@ -38,5 +41,3 @@ struct FoodDetailView: View {
         .navigationTitle(foodItem.name)
     }
 }
-
-
