@@ -38,6 +38,38 @@ This separation of concerns allows for a more organized codebase and easier unit
 | ![Screenshot 1](https://i.ibb.co/pX63Dn5/thumnail.png) | ![Screenshot 2](https://i.ibb.co/QpkTSWt/Simulator-Screenshot-i-Phone-15-2024-10-21-at-13-19-07.png) | ![Screenshot 3](https://i.ibb.co/C0BfBYP/Simulator-Screenshot-i-Phone-15-2024-10-21-at-13-19-19.png) | ![Screenshot 4](https://i.ibb.co/FXndt07/Simulator-Screenshot-i-Phone-15-2024-10-21-at-13-24-53.png) | ![Screenshot 5](https://i.ibb.co/GHJV27W/Simulator-Screenshot-i-Phone-15-2024-10-21-at-13-24-43.png) |
 |---|---|---|---|---|
 
+## Folder structure
+    FoodDelivery
+    ├── API
+    │   └── Service
+    │   │    ├── FoodService
+    │   ├── NetworkManager
+    │   └── APIEndPoint
+    ├── Helpers
+    │   ├── APIHelper
+    │   └── ImageCache
+    ├── Views
+    │   ├── Checkout
+    │   ├── Profile
+    │   ├── Order
+    │   ├── Home
+    │   │   └── CustomView
+    │   │   │    ├── FoodDetailView
+    │   │   │    ├── SearchBar
+    │   │   │    ├── SearchView
+    │   │   │    ├── FoodGridView
+    │   │   └── FoodListMainView
+    │   └── TabbarView
+    ├── ViewModels
+    │   ├── Checkout
+    │   ├── Profile
+    │   ├── Order
+    │   └── Home
+    │       └── FoodListViewModel
+    ├── Models
+    │   ├── FoodItem
+    │   └── Categories
+    └── Assets
 
 ## Video Demo
 
