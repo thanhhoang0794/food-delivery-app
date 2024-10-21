@@ -34,6 +34,11 @@ This separation of concerns allows for a more organized codebase and easier unit
 - AsyncImage for asynchronous image loading
 - Alamofire
 
+## Screenshots
+| ![Screenshot 1](https://i.ibb.co/pX63Dn5/thumnail.png) | ![Screenshot 2](https://i.ibb.co/QpkTSWt/Simulator-Screenshot-i-Phone-15-2024-10-21-at-13-19-07.png) | ![Screenshot 3](https://i.ibb.co/C0BfBYP/Simulator-Screenshot-i-Phone-15-2024-10-21-at-13-19-19.png) | ![Screenshot 4](https://i.ibb.co/FXndt07/Simulator-Screenshot-i-Phone-15-2024-10-21-at-13-24-53.png) | ![Screenshot 5](https://i.ibb.co/GHJV27W/Simulator-Screenshot-i-Phone-15-2024-10-21-at-13-24-43.png) |
+|---|---|---|---|---|
+
+
 ## Video Demo
 
 Click image to watch the demo of the FoodDelivery app on Vimeo:
@@ -47,4 +52,11 @@ Click image to watch the demo of the FoodDelivery app on Vimeo:
 1. Clone the repository:
    ```bash
    git clone https://github.com/thanhhoang0794/food-delivery-app.git
-   cd FoodDelivery
+   cd food-delivery-app
+2. Open the project workspace in Xcode:
+    ```bash
+    open FoodDelivery.xcworkspace
+3. Select the scheme FoodApp from the scheme dropdown in the Xcode toolbar.
+4. Select your target device or simulator from the Xcode toolbar.
+5. Build and run the app:
+- Click the "Run" button (▶️) in the Xcode toolbar, or use the keyboard shortcut Cmd + R.
