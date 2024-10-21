@@ -15,10 +15,8 @@ class APIService {
     
     // Function to fetch categories (already defined)
     func fetchCategories(completion: @escaping (Result<[Category], Error>) -> Void) {
-        let url = "https://www.themealdb.com/api/json/v1/1/categories.php"
-        
-        AF.request(url, method: .get).responseDecodable(of: CategoryResponse.self) { response in
-            switch response.result {
+        NetworkManager.shared.request(.fetchCategories) { (result: Result<CategoryResponse, Error>) in
+            switch result {
             case .success(let categoryResponse):
                 completion(.success(categoryResponse.categories))
             case .failure(let error):
@@ -29,10 +27,8 @@ class APIService {
 
     // Function to fetch meals by category
     func fetchMeals(forCategory category: String, completion: @escaping (Result<[Meal], Error>) -> Void) {
-        let url = "https://www.themealdb.com/api/json/v1/1/filter.php?c=\(category)"
-        
-        AF.request(url, method: .get).responseDecodable(of: MealResponse.self) { response in
-            switch response.result {
+        NetworkManager.shared.request(.getListMealByCategories(id: category)) { (result: Result<MealResponse, Error>) in
+            switch result {
             case .success(let mealResponse):
                 completion(.success(mealResponse.meals))
             case .failure(let error):
