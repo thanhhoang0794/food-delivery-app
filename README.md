@@ -38,7 +38,7 @@ This separation of concerns allows for a more organized codebase and easier unit
 
 Watch the demo of the FoodDelivery app on Vimeo:
 
-[![FoodDelivery Video Demo](https://i.ibb.co/pX63Dn5/thumnail.png)]((https://vimeo.com/1021588384?share=copy))
+[![FoodDelivery Video Demo](https://i.ibb.co/pX63Dn5/thumnail.png)](https://vimeo.com/1021588384?share=copy)
 
 ## Installation
 
